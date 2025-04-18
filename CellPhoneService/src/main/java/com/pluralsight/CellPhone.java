@@ -9,13 +9,17 @@ public class CellPhone {
     private String carrier = "";
     private String phoneNumber = "";
     private String owner = "";
+    private String message = "";
 
-    public CellPhone (int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+    public CellPhone (int serialNumber, String model, String carrier, String phoneNumber,
+                      String owner, String message) {
         this.serialNumber = serialNumber;
         this.model = model;
         this.carrier = carrier;
         this.phoneNumber = phoneNumber;
         this.owner = owner;
+        this.message = message;
+
     }
 
     public void getUser(Scanner scanner) {
@@ -53,10 +57,10 @@ public class CellPhone {
         this.phoneNumber = phoneNumber;
     }
 
+
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
 
     public int getSerialNumber() {
         return serialNumber;
@@ -76,5 +80,15 @@ public class CellPhone {
 
     public String getOwner() {
         return owner;
+    }
+
+    public String dial(String phoneNumber) {
+        whoIsCalling(phoneNumber);
+        return message;
+    }
+
+    public void whoIsCalling(String phoneNumber) {
+        this.message = this.message.format("%s's phone is calling %s", this.owner,
+                                           phoneNumber);
     }
 }

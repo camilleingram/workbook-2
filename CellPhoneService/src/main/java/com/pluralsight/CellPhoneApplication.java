@@ -7,15 +7,21 @@ public class CellPhoneApplication {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        CellPhone myPhone = new CellPhone(0, "", "", "", "");
+        CellPhone phone1 = new CellPhone(0, "", "", "", "", "");
 
-        myPhone.getUser(scanner);
-        System.out.printf("Serial Number: %d %n", myPhone.getSerialNumber());
-        System.out.printf("Model: %s %n", myPhone.getModel());
-        System.out.printf("Carrier: %s %n", myPhone.getCarrier());
-        System.out.printf("Phone Number: %s %n", myPhone.getPhoneNumber());
-        System.out.printf("Owner: %s", myPhone.getOwner());
+        CellPhone phone2 = new CellPhone(0, "", "", "", "", "");
 
+
+        phone1.getUser(scanner);
+        phone2.getUser(scanner);
+
+        display(phone1, phone2);
+
+    }
+
+    public static void display(CellPhone phone1, CellPhone phone2) {
+       System.out.println(phone1.dial(phone2.getPhoneNumber()));
+       System.out.println(phone2.dial(phone1.getPhoneNumber()));
     }
 
 
