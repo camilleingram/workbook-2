@@ -17,6 +17,7 @@ public class AddressBuilder {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Please provide the following information: ");
         System.out.print("Full name: ");
         name = scanner.nextLine();
@@ -28,8 +29,10 @@ public class AddressBuilder {
         shippingAddress = displayShipping();
 
         System.out.println(name);
+
         System.out.println("Billing Address: ");
         System.out.println(billingAddress);
+
         System.out.println("Shipping Address: ");
         System.out.print(shippingAddress);
     }
