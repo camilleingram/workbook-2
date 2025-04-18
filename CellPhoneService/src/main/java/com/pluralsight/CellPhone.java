@@ -82,12 +82,12 @@ public class CellPhone {
         return owner;
     }
 
-    public String dial(String phoneNumber) {
-        whoIsCalling(phoneNumber);
+    public String dial(CellPhone CellPhone) {
+        dial(CellPhone.getPhoneNumber());
         return message;
     }
 
-    public void whoIsCalling(String phoneNumber) {
+    public void dial(String phoneNumber) {
         this.message = this.message.format("%s's phone is calling %s", this.owner,
                                            phoneNumber);
     }

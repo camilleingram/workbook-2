@@ -20,8 +20,8 @@ public class CellPhoneApplication {
     }
 
     public static void display(CellPhone phone1, CellPhone phone2) {
-       System.out.println(phone1.dial(phone2.getPhoneNumber()));
-       System.out.println(phone2.dial(phone1.getPhoneNumber()));
+       System.out.println(phone1.dial(phone2));
+       System.out.println(phone2.dial(phone1));
     }
 
 
